@@ -19,6 +19,5 @@ with DAG (
 ) as dag:
     load_data = PythonOperator(
         task_id='load_data_to_database',
-        python_callable=LoadDataToDB.main,
-        env={'NEWS_API_KEY': '38093f5839224d5ebea505260400ee22'}
+        python_callable=LoadDataToDB.main
     )
